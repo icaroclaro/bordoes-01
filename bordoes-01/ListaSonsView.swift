@@ -14,7 +14,7 @@ struct CardListaSonsView: View{
     @State var habilitado: Bool
     
     @State private var isSharePresented: Bool = false
-    var classeTeste = ClasseTeste()
+    var bordaoService = BordaoService()
 
 
     var body: some View{
@@ -60,7 +60,7 @@ struct CardListaSonsView: View{
             .sheet(isPresented: $isSharePresented, onDismiss: {
                 print("Dismiss")
             }, content: {
-                ActivityViewController(activityItems: classeTeste.teste(audio: audio))
+                ActivityViewController(activityItems: bordaoService.CompartilharAudio(audio: audio))
             })
             .buttonStyle(BorderlessButtonStyle())
         }

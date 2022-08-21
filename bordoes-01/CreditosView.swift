@@ -8,53 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct TestView: View{
-    @State private var isSharePresented: Bool = false
-    var classeTeste = ClasseTeste()
 
-    var body: some View{
-        Button(action: {
-            self.isSharePresented = true
-            
-        }){
-            Text("CLICK")
-        }
-        .sheet(isPresented: $isSharePresented, onDismiss: {
-            print("Dismiss")
-        }, content: {
-            ActivityViewController(activityItems: classeTeste.teste(audio: "oipsual"))
-        })
-        .buttonStyle(BorderlessButtonStyle())
-    }
-}
-class ClasseTeste{
-    func teste(audio: String) -> [NSURL]{
-        let audioFileName = audio
-        var filesToShare = [NSURL]()
-
-        if let audioFileURL = Bundle.main.url(forResource: audioFileName, withExtension: "mp3", subdirectory: "audioFiles") {
-            print(audioFileURL)
-            
-            let fileURL = NSURL(fileURLWithPath: audioFileURL.relativePath)
-
-            filesToShare.append(fileURL)
-        }
-        return filesToShare
-    }
-}
-
-struct ActivityViewController: UIViewControllerRepresentable {
-
-    var activityItems: [Any]
-    var applicationActivities: [UIActivity]? = nil
-
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityViewController>) -> UIActivityViewController {
-        let controller = UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
-        return controller
-    }
-
-    func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ActivityViewController>) {}
-}
 
 
 func getDocumentsDirectory() -> NSString {

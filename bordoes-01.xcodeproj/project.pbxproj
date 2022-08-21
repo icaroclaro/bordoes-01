@@ -23,6 +23,7 @@
 		DC79581228ABCF50003D30EB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79581128ABCF50003D30EB /* DetailView.swift */; };
 		DC79581428ABCF94003D30EB /* CreditosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79581328ABCF94003D30EB /* CreditosView.swift */; };
 		DC79581628ABCFE7003D30EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79581528ABCFE7003D30EB /* HomeView.swift */; };
+		DCC0ED9B28B2BEED0099E658 /* BordaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC0ED9A28B2BEED0099E658 /* BordaoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		DC79581128ABCF50003D30EB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DC79581328ABCF94003D30EB /* CreditosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditosView.swift; sourceTree = "<group>"; };
 		DC79581528ABCFE7003D30EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DCC0ED9A28B2BEED0099E658 /* BordaoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordaoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				DC79581128ABCF50003D30EB /* DetailView.swift */,
 				DC79581328ABCF94003D30EB /* CreditosView.swift */,
 				DC6B021B28AC05AF00E72C24 /* Repositorio.swift */,
+				DCC0ED9A28B2BEED0099E658 /* BordaoService.swift */,
 				DC0847DF28B1D88C00147886 /* audioFiles */,
 				DC2A78D528A17EDF00D231C2 /* Assets.xcassets */,
 				DC2A78D728A17EDF00D231C2 /* Preview Content */,
@@ -186,6 +189,7 @@
 				DC79581228ABCF50003D30EB /* DetailView.swift in Sources */,
 				DC79581628ABCFE7003D30EB /* HomeView.swift in Sources */,
 				DC2A78D428A17EDB00D231C2 /* ContentView.swift in Sources */,
+				DCC0ED9B28B2BEED0099E658 /* BordaoService.swift in Sources */,
 				DC2A78D228A17EDB00D231C2 /* bordoes_01App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
