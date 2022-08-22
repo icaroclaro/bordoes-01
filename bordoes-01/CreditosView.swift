@@ -8,9 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-
-
 func getDocumentsDirectory() -> NSString {
     let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
     let documentsDirectory = paths[0]
@@ -62,10 +59,12 @@ struct HeaderPacoteCreditoView: View{
     var body: some View{
         HStack{
             Text("Créditos")
-                .foregroundColor(.white)
+                .bold()
+                .foregroundColor(.black)
+                .font(.title)
         }
         .frame(maxWidth: .infinity)
-        .background(.black)
+        .background(.white)
         HStack{
             Image("moedas-de-dolar")
                 .frame(maxWidth: .infinity, alignment: .leading)

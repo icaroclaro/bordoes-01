@@ -74,18 +74,38 @@ struct SoundsView: View{
     @Binding var artista: Artista
 
     var body: some View{
-        VStack{
-            chevronDownButtom(isPresented: $isPresented)
-            Text(artista.nome)
-                .font(.title)
+        VStack(spacing: 0){
+            VStack{
+                Button(action:{
+                    isPresented = false
+                }){
+                    Text(artista.nome)
+                        .bold()
+                        .foregroundColor(.black)
+                        .font(.title)
+
+                    Image(systemName: "chevron.down")
+                        .font(.title2)
+                        .foregroundColor(.black)
+                        .padding()
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .background(Color(red: 1, green: 1, blue: 1, opacity: 0.9 ))
+            .frame(maxWidth: .infinity)
+            
             List{
                 ForEach(artista.bordoes){item in
                     CardListaSonsView(audio: item.audio, descricao: item.descricao, habilitado: item.habilitado)
                 }
+                .listRowBackground(Color(red: 1, green: 1, blue: 1, opacity: 0))
+                .listRowSeparator(.hidden)
+
             }
+            .listStyle(.plain)
         }
         .background(
-            Image("background-8")
+            Image("fundo01")
                 .resizable(resizingMode: .tile)
                 .opacity(0.3)
         )

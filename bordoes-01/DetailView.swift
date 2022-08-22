@@ -43,7 +43,7 @@ struct DetailsView: View{
             .frame(maxHeight: .infinity, alignment: .topLeading)
         }
         .background(
-            Image("background-7")
+            Image("fundo01")
                 .resizable(resizingMode: .tile)
                 .opacity(0.05)
         )

@@ -10,27 +10,25 @@ import SwiftUI
 
 struct HomeView: View{
     var body: some View{
-        VStack{
+        VStack(spacing: 0){
             HStack{
                 Text("Artistas")
-                    .foregroundColor(.white)
+                    .bold()
+                    .foregroundColor(.black)
+                    .font(.title)
             }
             .frame(maxWidth: .infinity)
-            .background(.black)
+            .background(.white)
     
             List{
                 ForEach(comediantes){item in
                     CardListaComediantes(artista: item)
                 }
+                .listRowBackground(Color(red: 1, green: 1, blue: 1, opacity: 0))
+                .listRowSeparator(.hidden)
             }
-            .onAppear(perform: {
-                UITableView.appearance().contentInset.top = -40
-            })
-
-            .listRowSeparator(.hidden)
-            .listStyle(.sidebar)
+            .listStyle(.plain)
         }
-        .frame(maxWidth: .infinity)
     }
 }
 

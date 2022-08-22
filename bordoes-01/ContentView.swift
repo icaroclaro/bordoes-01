@@ -23,23 +23,23 @@ struct MainView: View {
                         .frame(width: 100, height: 100)
                 }
                 .background(
-                    Image("background-2")
+                    Image("fundo01")
                         .resizable(resizingMode: .tile)
-                        .opacity(1)
+                        .opacity(0.2)
                 )
             MeusCreditosView()
                 .tabItem {
                     Image(systemName: "bag")
                 }
                 .background(
-                    Image("background-4")
+                    Image("fundo01")
                         .resizable(resizingMode: .tile)
                         .opacity(0.2)
                 )
         }
-        .accentColor(Color(red: 0.698, green: 0.957, blue: 0.22, opacity: 1.0))
-        .background(.black)
-        .font(.title)
+  //      .accentColor(Color(red: 0.698, green: 0.957, blue: 0.22, opacity: 1.0))
+  //      .background(.black)
+  //      .font(.title)
     }
 }
 
