@@ -37,7 +37,7 @@ struct MainView: View {
                         .opacity(0.2)
                 )
         }
-  //      .accentColor(Color(red: 0.698, green: 0.957, blue: 0.22, opacity: 1.0))
+        .accentColor(Color(red: 0, green: 0, blue: 0, opacity: 1.0))
   //      .background(.black)
   //      .font(.title)
     }
@@ -51,9 +51,10 @@ struct chevronDownButtom: View{
             Button(action:{
                 isPresented = false
             }){
-                Image(systemName: "chevron.down")
+                Image(uiImage: UIImage(systemName: "chevron.down")!)
                     .font(.title)
-                    .padding()
+                    .padding(.top, 20)
+                    .foregroundColor(.white)
             }
             .frame(maxWidth: .infinity)
         }
@@ -98,6 +99,8 @@ func playSound(audio: String) {
         guard let player = player else { return }
 
         player.play()
+        
+        //player.stop()
 
     } catch let error {
         print(error.localizedDescription)

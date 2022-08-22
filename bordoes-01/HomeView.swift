@@ -14,12 +14,10 @@ struct HomeView: View{
             HStack{
                 Text("Artistas")
                     .bold()
-                    .foregroundColor(.black)
                     .font(.title)
             }
             .frame(maxWidth: .infinity)
-            .background(.white)
-    
+  
             List{
                 ForEach(comediantes){item in
                     CardListaComediantes(artista: item)

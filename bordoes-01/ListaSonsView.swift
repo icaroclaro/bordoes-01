@@ -72,6 +72,15 @@ struct CardListaSonsView: View{
 struct SoundsView: View{
     @Binding var isPresented: Bool
     @Binding var artista: Artista
+    @Environment(\.colorScheme) var colorScheme
+
+    var textColor: Color {
+        if colorScheme == .dark {
+            return Color.white
+        } else {
+            return Color.black
+        }
+    }
 
     var body: some View{
         VStack(spacing: 0){
@@ -81,17 +90,16 @@ struct SoundsView: View{
                 }){
                     Text(artista.nome)
                         .bold()
-                        .foregroundColor(.black)
+                        .foregroundColor(textColor)
                         .font(.title)
 
                     Image(systemName: "chevron.down")
                         .font(.title2)
-                        .foregroundColor(.black)
+                        .foregroundColor(textColor)
                         .padding()
                 }
                 .frame(maxWidth: .infinity)
             }
-            .background(Color(red: 1, green: 1, blue: 1, opacity: 0.9 ))
             .frame(maxWidth: .infinity)
             
             List{
